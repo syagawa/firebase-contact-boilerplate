@@ -1,0 +1,27 @@
+<div id="contact">
+  <p>このサイトについての疑問点や、お問い合わせは下記からお願いいたします。返信が遅れる場合もございますが気長にお待ちください。</p>
+  <form v-on:submit.prevent="sendMail">
+    <fieldset class="uk-fieldset">
+      <div class="uk-margin">
+        <label class="uk-form-label" for="input-name">{{ names.name }}</label>
+        <div class="uk-form-controls">
+          <input class="uk-input uk-form-small" type="text" v-bind:placeholder="names.ph_name" id="input-name" v-model="name">
+        </div>
+      </div>
+      <div class="uk-margin">
+        <label class="uk-form-label" for="input-email">{{names.email}}</label>
+        <div class="uk-form-controls">
+          <input class="uk-input uk-form-small" type="text" v-bind:placeholder="names.ph_email" id="input-email" v-model="email">
+        </div>
+      </div>
+      <div class="uk-margin">
+        <label class="uk-form-label" for="input-contents">{{ names.contents }}</label>
+        <div class="uk-form-controls">
+          <textarea class="uk-form-small uk-textarea" rows="5" v-bind:placeholder="names.ph_contents" id="input-contents" v-model="contents">
+          </textarea>
+        </div>
+      </div>
+      <button class="uk-button uk-button-primary uk-button-small">送信</button>
+    </fieldset>
+  </form>
+</div>
