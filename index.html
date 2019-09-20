@@ -1,27 +1,22 @@
 <div id="contact">
-  <p>このサイトについての疑問点や、お問い合わせは下記からお願いいたします。返信が遅れる場合もございますが気長にお待ちください。</p>
-  <form v-on:submit.prevent="sendMail">
-    <fieldset class="uk-fieldset">
-      <div class="uk-margin">
-        <label class="uk-form-label" for="input-name">{{ names.name }}</label>
-        <div class="uk-form-controls">
-          <input class="uk-input uk-form-small" type="text" v-bind:placeholder="names.ph_name" id="input-name" v-model="name">
-        </div>
+  <p>このサイトについての疑問点や、お問い合わせは下記からお願いいたします。</p>
+  <form id="contact-form" class="contact-form">
+    <fieldset>
+      <div class="item">
+        <label for="input-name">名前</label>
+        <input type="text" placeholder="名前" id="input-name">
       </div>
-      <div class="uk-margin">
-        <label class="uk-form-label" for="input-email">{{names.email}}</label>
-        <div class="uk-form-controls">
-          <input class="uk-input uk-form-small" type="text" v-bind:placeholder="names.ph_email" id="input-email" v-model="email">
-        </div>
+      <div class="item">
+        <label for="input-email">メールアドレス</label>
+        <input type="text" placeholder="abc@example.com" id="input-email">
       </div>
-      <div class="uk-margin">
-        <label class="uk-form-label" for="input-contents">{{ names.contents }}</label>
-        <div class="uk-form-controls">
-          <textarea class="uk-form-small uk-textarea" rows="5" v-bind:placeholder="names.ph_contents" id="input-contents" v-model="contents">
-          </textarea>
-        </div>
+      <div class="item">
+        <label for="input-contents">内容</label>
+        <textarea rows="5" placeholder="お問い合わせ内容を入力してください" id="input-contents">
+        </textarea>
       </div>
-      <button class="uk-button uk-button-primary uk-button-small">送信</button>
+      <button>送信</button>
     </fieldset>
   </form>
 </div>
+
